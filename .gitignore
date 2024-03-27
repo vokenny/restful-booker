@@ -3,3 +3,7 @@
 .vscode/
 npm-debug.log
 .idea
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

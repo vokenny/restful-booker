@@ -25,6 +25,8 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.30",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
     "supertest": "^6.3.1"
