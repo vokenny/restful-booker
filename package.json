@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "start": "cross-env SEED=true node ./bin/www",
+    "start:test": "cross-env node ./bin/www",
     "test": "mocha -R spec tests/spec.js",
-    "test:api": "npx playwright test",
+    "test:api": "npx playwright test --project=chromium",
     "build_docs": "apidoc -i ./routes/ -o public/apidoc/"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.42.1",
     "@types/node": "^20.11.30",
     "chai": "^4.3.7",

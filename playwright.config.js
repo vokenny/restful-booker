@@ -71,7 +71,7 @@ module.exports = defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm start',
+    command: 'npm run start:test',
     url: 'http://localhost:3001',
     reuseExistingServer: !process.env.CI,
   },
