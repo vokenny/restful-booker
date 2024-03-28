@@ -18,7 +18,7 @@ function generateBooking() {
   const checkOutDate = addDays(checkInDate, 10);
 
   const newBooking = {
-    firstame: faker.person.firstName(),
+    firstname: faker.person.firstName(),
     lastname: faker.person.lastName(),
     totalprice: faker.finance.amount(),
     depositpaid: faker.datatype.boolean(),
@@ -26,6 +26,7 @@ function generateBooking() {
       checkin: toIsoStringDate(checkInDate),
       checkout: toIsoStringDate(checkOutDate),
     },
+    additionalneeds: faker.lorem.sentence(5),
   };
 
   return newBooking;
@@ -53,4 +54,4 @@ function prepopulateBookings(numOfBookings) {
   newBookingsDetails.forEach(createBooking);
 }
 
-module.exports = { prepopulateBookings };
+module.exports = { generateBooking, prepopulateBookings };
