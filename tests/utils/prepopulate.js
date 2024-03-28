@@ -38,7 +38,8 @@ function createBooking(bookingDetails) {
       return;
     }
 
-    console.log('[createBooking] Added booking:', res);
+    if (process.env.DEBUG === 'true')
+      console.log('[createBooking] Added booking:', res);
   });
 }
 

@@ -6,6 +6,7 @@
     "start": "cross-env SEED=true node ./bin/www",
     "test": "mocha -R spec tests/spec.js",
     "test:api": "npx playwright test --project=chromium",
+    "test:api:debug": "DEBUG=true npx playwright test --project=chromium",
     "build_docs": "apidoc -i ./routes/ -o public/apidoc/"
   },
   "dependencies": {
